@@ -2,28 +2,16 @@
 
 Este projeto é um sistema bancário simples, construído com **Programação Orientada a Objetos (POO)** em Python. Ele simula agências, contas correntes e cartões de crédito com funcionalidades reais, como transferências, saques, depósitos e gerenciamento de clientes.
 
-## 📂 Estrutura do Projeto
-
-
-📁 projeto\_banco/
-├── main.py
-├── Agencia.py
-├── ContasBanco.py
-└── README.md
-
-````
-
----
-
 ## 🚀 Como executar
 
 1. Clone o repositório:
+2. 
    ```bash
    git clone https://github.com/seuusuario/projeto_banco.git
    cd projeto_banco
-````
+   ````
 
-2. Execute o projeto:
+3. Execute o projeto:
 
    ```bash
    python main.py
