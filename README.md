@@ -158,5 +158,3 @@ pip install pytz
 
 Este projeto está sob a licença MIT.
 
-```
-
