@@ -1,7 +1,3 @@
-Perfeito! Aqui está o conteúdo completo do seu `README.md`, pronto para ser copiado:
-
----
-
 ```markdown
 # 💼 Sistema Bancário POO com Python
 
