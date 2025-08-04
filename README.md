@@ -7,7 +7,7 @@ Este projeto é um sistema bancário simples, construído com **Programação Or
 1. Clone o repositório:
 2. 
    ```bash
-   git clone https://github.com/seuusuario/projeto_banco.git
+   git clone https://github.com/nicolasandreos/Programacao-Orienteda-Objeto
    cd projeto_banco
    ````
 
