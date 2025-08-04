@@ -1,11 +1,9 @@
-```markdown
 # 💼 Sistema Bancário POO com Python
 
 Este projeto é um sistema bancário simples, construído com **Programação Orientada a Objetos (POO)** em Python. Ele simula agências, contas correntes e cartões de crédito com funcionalidades reais, como transferências, saques, depósitos e gerenciamento de clientes.
 
 ## 📂 Estrutura do Projeto
 
-```
 
 📁 projeto\_banco/
 ├── main.py
@@ -174,7 +172,3 @@ Este projeto está sob a licença MIT.
 
 ```
 
----
-
-Se quiser, posso também gerar o arquivo `README.md` para você baixar. Deseja isso?
-```
