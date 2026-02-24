@@ -1,45 +1,60 @@
-# 💼 Sistema Bancário POO com Python
+# 💼 OOP Banking System with Python
 
-Este projeto é um sistema bancário simples, construído com **Programação Orientada a Objetos (POO)** em Python. Ele simula agências, contas correntes e cartões de crédito com funcionalidades reais, como transferências, saques, depósitos e gerenciamento de clientes.
-
-## 🚀 Como executar
-
-1. Clone o repositório:
-2. 
-   ```bash
-   git clone https://github.com/nicolasandreos/Programacao-Orienteda-Objeto
-   cd Programacao-Orienteda-Objeto
-   ````
-
-3. Execute o projeto:
-
-   ```bash
-   python main.py
-   ```
+This project is a simple banking system built using **Object-Oriented Programming (OOP)** in Python.  
+It simulates bank branches, checking accounts, and credit cards with real-world operations such as transfers, withdrawals, deposits, and client management.
 
 ---
 
-## 🧠 Conceitos Aplicados
+## 🚀 How to Run
 
-* Herança
-* Encapsulamento
-* Métodos estáticos e propriedades
-* Polimorfismo (sobrescrita de métodos)
-* Organização modular
-* Simulação de operações bancárias
+1. Clone the repository:
+
+```bash
+git clone https://github.com/nicolasandreos/Programacao-Orienteda-Objeto
+cd Programacao-Orienteda-Objeto
+```
+
+2. Run the project:
+
+```bash
+python main.py
+```
 
 ---
 
-## 📝 Arquivo `main.py`
+## 🧠 Applied Concepts
 
-Este é o ponto de entrada do projeto, onde:
+- Inheritance  
+- Encapsulation  
+- Static methods and properties  
+- Polymorphism (method overriding)  
+- Modular organization  
+- Banking operations simulation  
 
-* Uma conta é criada para o usuário.
-* Um cartão de crédito é vinculado à conta.
-* Três tipos de agência são instanciadas.
-* Clientes são adicionados e exibidos.
+---
 
-### 🔁 Exemplo de uso:
+## 📁 Project Structure
+
+```bash
+Programacao-Orienteda-Objeto/
+│
+├── main.py
+├── Agencia.py
+└── ContasBanco.py
+```
+
+---
+
+## 📝 `main.py`
+
+This is the entry point of the project, where:
+
+- A checking account is created
+- A credit card is linked to the account
+- Three types of bank branches are instantiated
+- Clients are added and displayed
+
+### 🔁 Example Usage:
 
 ```python
 conta_nicolas = ContaCorrente('Nicolas', '540.379.608-85', 123, 89672)
@@ -52,74 +67,103 @@ agencia_comum.adicionar_cliente("Mario", 98237489236, 1000)
 
 ---
 
-## 🏦 Módulo `Agencia.py`
+## 🏦 `Agencia.py` Module
 
-Este módulo define uma classe base `Agencia` e três subclasses:
+This module defines a base class `Agencia` and three subclasses.
 
 ### ✅ `class Agencia`
 
-Atributos principais:
+Main attributes:
 
-* `telefone`, `cnpj`, `numero` (aleatório), `clientes`, `caixa`, `emprestimos`
-* Métodos: `consultar_caixa`, `verificar_caixa`, `limite_caixa`, `adicionar_cliente`, `emprestimo`
+- `telefone`, `cnpj`, `numero` (random), `clientes`, `caixa`, `emprestimos`
+
+Main methods:
+
+- `consultar_caixa`
+- `verificar_caixa`
+- `limite_caixa`
+- `adicionar_cliente`
+- `emprestimo`
 
 ---
 
 ### 🌐 `class AgenciaVirtual(Agencia)`
 
-Extensão de `Agencia`, adiciona:
+Extends `Agencia` and adds:
 
-* `site`: endereço do site
-* `caixa_paypal`: valor disponível no PayPal
-* Métodos extras: `depositar_paypal`, `sacar_paypal`
+- `site`: website address  
+- `caixa_paypal`: available PayPal balance  
+
+Additional methods:
+
+- `depositar_paypal`
+- `sacar_paypal`
 
 ---
 
 ### 🏢 `class AgenciaComum(Agencia)`
 
-* Caixa inicial: R\$500.000
+- Initial balance: R$500,000
 
 ---
 
 ### 💎 `class AgenciaPremium(Agencia)`
 
-* Caixa inicial: R\$10.000.000
-* Restrições: só permite clientes com patrimônio ≥ R\$1.000.000
+- Initial balance: R$10,000,000  
+- Restriction: only allows clients with assets ≥ R$1,000,000  
 
 ---
 
-## 💰 Módulo `ContasBanco.py`
+## 💰 `ContasBanco.py` Module
 
-Define classes para manipulação de contas bancárias e cartões.
+Defines classes for handling bank accounts and credit cards.
+
+---
 
 ### 🧾 `class ContaCorrente`
 
-Atributos:
+Attributes:
 
-* `_nome`, `_cpf`, `_saldo`, `_agencia`, `_num_conta`, `_transacoes`, `cartoes`
+- `_nome`
+- `_cpf`
+- `_saldo`
+- `_agencia`
+- `_num_conta`
+- `_transacoes`
+- `cartoes`
 
-Métodos:
+Methods:
 
-* `depositar`, `sacar`, `transferir`
-* `consultar_saldo`, `consultar_limite`, `consultar_transacoes`
+- `depositar`
+- `sacar`
+- `transferir`
+- `consultar_saldo`
+- `consultar_limite`
+- `consultar_transacoes`
 
 ---
 
 ### 💳 `class CartaoCredito`
 
-Atributos:
+Attributes:
 
-* `_num_cartao`, `_titular`, `_validade`, `_cod_seguranca`, `_limite`, `_senha`, `conta_corrente`
+- `_num_cartao`
+- `_titular`
+- `_validade`
+- `_cod_seguranca`
+- `_limite`
+- `_senha`
+- `conta_corrente`
 
-Recursos:
+Features:
 
-* Validação de senha (mínimo 4 dígitos numéricos)
-* Criação automática de número de cartão e código de segurança
-* Vinculação direta à conta corrente
+- Password validation (minimum 4 numeric digits)
+- Automatic generation of card number and security code
+- Direct linking to a checking account
 
 ---
 
-## 📌 Exemplo prático completo:
+## 📌 Complete Practical Example
 
 ```python
 from ContasBanco import CartaoCredito, ContaCorrente
@@ -139,14 +183,15 @@ agencia_comum.adicionar_cliente("Mario", 98237489236, 1000)
 
 ---
 
-## 📚 Requisitos
+## 📚 Requirements
 
-* Python 3.8 ou superior
-* Biblioteca externa:
+- Python 3.8 or higher  
 
-  * `pytz`: para timezone no histórico de transações
+External library:
 
-Instalação do `pytz`:
+- `pytz` (used for timezone handling in transaction history)
+
+Install dependency:
 
 ```bash
 pip install pytz
@@ -154,7 +199,19 @@ pip install pytz
 
 ---
 
-## 📄 Licença
+## 🎯 Learning Objectives
 
-Este projeto está sob a licença MIT.
+This project was developed to practice:
 
+- Object-Oriented Programming in Python  
+- Class relationships and inheritance  
+- Encapsulation and data protection  
+- Banking logic simulation  
+- Modular code organization  
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+```
